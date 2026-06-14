@@ -1,10 +1,10 @@
 from pessoa import Pessoa
 
 class Funcionario(Pessoa):
-    def __init__(self, nome, telefone, cep):
-        super().__init__(nome, telefone, cep)
+    def __init__(self, nome, telefone):
+        super().__init__(nome, telefone)
 
     def exibirFuncionario(self):
-        print("")
+        pass
 
 

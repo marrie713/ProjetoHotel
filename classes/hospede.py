@@ -5,5 +5,5 @@ class Hospede(Pessoa):
         super().__init__(nome, telefone, cep)
 
     def exibir_hospede(self):
-        print(f"-----CADASTRO DO HÓSPEDE-----\nNome: {self.nome}\nTelefone: {self.telefone}\nCep: {self.cep}")
+        pass
 
