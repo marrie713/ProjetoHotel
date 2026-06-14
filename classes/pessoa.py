@@ -1,6 +1,5 @@
 class Pessoa:
-    def __init__(self, funcionario, hospede):
-        self.funcionario = funcionario
-        self.hospede = hospede
-
-    def 
+    def __init__(self, nome, telefone, cep):
+        self.nome = nome
+        self.telefone = telefone
+        self.cep = cep
