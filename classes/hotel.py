@@ -1,5 +1,5 @@
-from hospede import Hospede
-from funcionario import Funcionario
+from classes.hospede import Hospede
+from classes.funcionario import Funcionario
 from classes.quarto import Quarto
 from classes.reserva import Reserva
 

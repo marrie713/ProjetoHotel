@@ -1,6 +1,5 @@
 #importar as classes
 # arquivo main funciona como a entrada do sistema/ menu e interação com usuário
-
 from classes.hotel import Hotel
 
 hotel = Hotel()

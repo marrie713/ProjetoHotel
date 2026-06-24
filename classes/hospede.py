@@ -1,4 +1,4 @@
-from pessoa import Pessoa
+from classes.pessoa import Pessoa
 
 class Hospede(Pessoa):
     def __init__(self, nome, telefone, cep):
