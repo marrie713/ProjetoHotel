@@ -1,39 +1,50 @@
 class Reserva:
-    def __init__(self):
-        self.quartos_disponiveis = [1, 2, 3, 4, 5]
-        self.quartos_ocupados = []
-
-    def atribuir_quarto(self):
-        print(f"Quartos disponíveis: {self.quartos_disponiveis}")
-
-        quarto = int(input("Escolha um quarto: "))
-
-        if quarto in self.quartos_disponiveis:
-            self.quartos_disponiveis.remove(quarto)
-            self.quartos_ocupados.append(quarto)
-
-            print(f"Quarto {quarto} reservado com sucesso!")
-        else:
-            print("Quarto indisponível ou inexistente.")
-    
-class Reserva:
 
     def __init__(self, hospede, quarto, dias):
-        self.hospede = hospede
-        self.quarto = quarto
-        self.dias = dias
+        self.__hospede = hospede
+        self.__quarto = quarto
+        self.__dias = dias
+
+    @property
+    def hospede(self):
+        return self.__hospede
+
+    @property
+    def quarto(self):
+        return self.__quarto
+
+    @property
+    def dias(self):
+        return self.__dias
 
     def calcular_valor(self):
-        return self.quarto.valor_diaria * self.dias
+        return self.__dias * self.__quarto.valor_diaria
 
     def gerar_comprovante(self):
 
-        print(f"""
-            =========================
-            RESERVA
-            Hóspede: {self.hospede.nome}
-            Quarto: {self.quarto.numero}
-            Diárias: {self.dias}
-            Valor: R$ {self.calcular_valor()}
-            =========================
-            """)
+        return (
+            "\n================================\n"
+            "       RESERVA REALIZADA\n"
+            "================================\n"
+            f"Hóspede: {self.__hospede.nome}\n"
+            f"Quarto: {self.__quarto.numero}\n"
+            f"Diárias: {self.__dias}\n"
+            f"Valor Total: R$ {self.calcular_valor():.2f}\n"
+            "================================"
+        )
+
+    def exibir_dados(self):
+
+        return (
+            f"Hóspede: {self.__hospede.nome}\n"
+            f"Quarto: {self.__quarto.numero}\n"
+            f"Diárias: {self.__dias}\n"
+            f"Valor Total: R$ {self.calcular_valor():.2f}"
+        )
+    
+    def to_dict(self):
+        return {
+        "cpf_hospede": self.hospede.cpf,
+        "numero_quarto": self.quarto.numero,
+        "dias": self.dias
+        }

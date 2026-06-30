@@ -1,17 +1,45 @@
 class Quarto:
 
-    def __init__(self, numero, valor_diaria):
-        self.numero = numero
-        self.valor_diaria = valor_diaria
-        self.ocupado = False
+    VALOR_DIARIA = 150
+
+    def __init__(self, numero):
+        self.__numero = numero
+        self.__ocupado = False
+
+    @property
+    def numero(self):
+        return self.__numero
+
+    @property
+    def valor_diaria(self):
+        return Quarto.VALOR_DIARIA
+
+    @property
+    def ocupado(self):
+        return self.__ocupado
+
+    @ocupado.setter
+    def ocupado(self, ocupado):
+        self.__ocupado = ocupado
 
     def ocupar(self):
-        self.ocupado = True
+        self.__ocupado = True
 
     def liberar(self):
-        self.ocupado = False
+        self.__ocupado = False
 
     def exibir_dados(self):
-        status = "Ocupado" if self.ocupado else "Livre"
 
-        print(f"Quarto: {self.numero}\n" f"Status: {status}")
+        status = "Ocupado" if self.__ocupado else "Disponível"
+
+        return (
+            f"Quarto: {self.__numero}\n"
+            f"Valor da diária: R$ {self.valor_diaria:.2f}\n"
+            f"Status: {status}"
+        )
+    
+    def to_dict(self):
+        return {
+        "numero": self.numero,
+        "ocupado": self.ocupado
+        }
