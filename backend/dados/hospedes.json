@@ -1,0 +1,32 @@
+[
+    {
+        "nome": "Maria",
+        "cpf": "494.570.998-00",
+        "telefone": "17 992448448"
+    },
+    {
+        "nome": "DIferente",
+        "cpf": "6666666666",
+        "telefone": "345678909"
+    },
+    {
+        "nome": "aaaaa",
+        "cpf": "aaaaa",
+        "telefone": "aaaaaa"
+    },
+    {
+        "nome": "Mariazinha",
+        "cpf": "11111111111",
+        "telefone": "2222222222"
+    },
+    {
+        "nome": "aaaaabb",
+        "cpf": "564645468",
+        "telefone": "54484546"
+    },
+    {
+        "nome": "Sla",
+        "cpf": "123456789118",
+        "telefone": "ab"
+    }
+]
