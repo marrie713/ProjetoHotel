@@ -1,6 +1,6 @@
 #importar as classes
 # arquivo main funciona como a entrada do sistema/ menu e interação com usuário
-from backend.classes.hotel import Hotel
+from classes.hotel import Hotel
 
 hotel = Hotel()
 

@@ -9,7 +9,7 @@
     },
     {
         "numero": 3,
-        "ocupado": false
+        "ocupado": true
     },
     {
         "numero": 4,
